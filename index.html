@@ -16,8 +16,13 @@
       {% assign principles = site.data.wcag %}
 
       {% for principle in principles %}
-        <h2>{{ principle.title}}</h2>
+        <h2>{{ principle.id }}. {{ principle.title }}</h2>
         <p>{{ principle.description }}</p>
+
+        {% for guideline in principle.guidelines %}
+          <h3>{{ guideline.id }}. {{ guideline.title }}</h3>
+          <p>{{ guideline.description }}</p>
+        {% endfor %}
       {% endfor %}
     </main>
   </body>
