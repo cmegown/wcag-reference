@@ -13,7 +13,33 @@
             "id": "1.1.1",
             "title": "Non-text Content",
             "description": "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.",
-            "level": "A"
+            "level": "A",
+            "techniques": [
+              {
+                "title": "Controls, Input",
+                "description": "If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to Success Criterion 4.1.2 for additional requirements for controls and content that accepts user input.)"
+              },
+              {
+                "title": "Time-Based Media",
+                "description": "If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)"
+              },
+              {
+                "title": "Test",
+                "description": "If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content."
+              },
+              {
+                "title": "Sensory",
+                "description": "If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content."
+              },
+              {
+                "title": "CAPTCHA",
+                "description": "If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities."
+              },
+              {
+                "title": "Decoration, Formatting, Invisible",
+                "description": "If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology."
+              }
+            ]
           }
         ]
       },
@@ -26,7 +52,17 @@
             "id": "1.2.1",
             "title": "Audio-only and Video-only (Prerecorded)",
             "description": "For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:",
-            "level": "A"
+            "level": "A",
+            "techniques": [
+              {
+                "title": "Prerecorded Audio-only",
+                "description": "An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content."
+              },
+              {
+                "title": "Prerecorded Video-only",
+                "description": "Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content."
+              }
+            ]
           },
           {
             "id": "1.2.2",
@@ -111,7 +147,17 @@
             "id": "1.3.5",
             "title": "Identify Input Purpose",
             "description": "The purpose of each input field collecting information about the user can be programmatically determined when:",
-            "level": "AA"
+            "level": "AA",
+            "techniques": [
+              {
+                "title": "",
+                "description": "The input field serves a purpose identified in the Input Purposes for User Interface Components section; and"
+              },
+              {
+                "title": "",
+                "description": "The content is implemented using technologies with support for identifying the expected meaning for form input data."
+              }
+            ]
           },
           {
             "id": "1.3.6",
@@ -142,7 +188,21 @@
             "id": "1.4.3",
             "title": "Contrast (Minimum)",
             "description": "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:",
-            "level": "AA"
+            "level": "AA",
+            "techniques": [
+              {
+                "title": "Large Text",
+                "description": "Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;"
+              },
+              {
+                "title": "Incidental",
+                "description": "Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement."
+              },
+              {
+                "title": "Logotypes",
+                "description": "Text that is part of a logo or brand name has no contrast requirement."
+              }
+            ]
           },
           {
             "id": "1.4.4",
@@ -154,25 +214,85 @@
             "id": "1.4.5",
             "title": "Images of Text",
             "description": "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for the following:",
-            "level": "AA"
+            "level": "AA",
+            "techniques": [
+              {
+                "title": "Customizable",
+                "description": "The image of text can be visually customized to the user's requirements;"
+              },
+              {
+                "title": "Essential",
+                "description": "A particular presentation of text is essential to the information being conveyed."
+              }
+            ]
           },
           {
             "id": "1.4.6",
             "title": "Contrast (Enhanced)",
             "description": "The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following:",
-            "level": "AAA"
+            "level": "AAA",
+            "techniques": [
+              {
+                "title": "Large Text",
+                "description": "Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1;"
+              },
+              {
+                "title": "Incidental",
+                "description": "Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement."
+              },
+              {
+                "title": "Logotypes",
+                "description": "Text that is part of a logo or brand name has no contrast requirement."
+              }
+            ]
           },
           {
             "id": "1.4.7",
             "title": "Low or No Background Audio",
             "description": "For prerecorded audio-only content that (1) contains primarily speech in the foreground, (2) is not an audio CAPTCHA or audio logo, and (3) is not vocalization intended to be primarily musical expression such as singing or rapping, at least one of the following is true:",
-            "level": "AAA"
+            "level": "AAA",
+            "techniques": [
+              {
+                "title": "No Background",
+                "description": "The audio does not contain background sounds."
+              },
+              {
+                "title": "Turn Off",
+                "description": "The background sounds can be turned off."
+              },
+              {
+                "title": "20 dB",
+                "description": "The background sounds are at least 20 decibels lower than the foreground speech content, with the exception of occasional sounds that last for only one or two seconds."
+              }
+            ]
           },
           {
             "id": "1.4.8",
             "title": "Visual Presentation",
             "description": "For the visual presentation of blocks of text, a mechanism is available to achieve the following:",
-            "level": "AAA"
+            "level": "AAA",
+            "techniques": [
+              {
+                "title": "",
+                "description": "Foreground and background colors can be selected by the user."
+              },
+              {
+                "title": "",
+                "description": "Width is no more than 80 characters or glyphs (40 if CJK)."
+              },
+              {
+                "title": "",
+                "description": "Text is not justified (aligned to both the left and the right margins)."
+              },
+              {
+                "title": "",
+                "description": "Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing."
+              },
+              {
+                "title": "",
+                "description": "Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window."
+              }
+            ]
           },
           {
             "id": "1.4.9",
@@ -184,25 +304,77 @@
             "id": "1.4.10",
             "title": "Reflow",
             "description": "Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:",
-            "level": "AA"
+            "level": "AA",
+            "techniques": [
+              {
+                "title": "",
+                "description": "Vertical scrolling content at a width equivalent to 320 CSS pixels;"
+              },
+              {
+                "title": "",
+                "description": "Horizontal scrolling content at a height equivalent to 256 CSS pixels."
+              }
+            ]
           },
           {
             "id": "1.4.11",
             "title": "Non-text Contrast",
             "description": "The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):",
-            "level": "AA"
+            "level": "AA",
+            "techniques": [
+              {
+                "title": "User Interface Components",
+                "description": "Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;"
+              },
+              {
+                "title": "Graphical Objects",
+                "description": "Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed."
+              }
+            ]
           },
           {
             "id": "1.4.12",
             "title": "Text Spacing",
             "description": "In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:",
-            "level": "AA"
+            "level": "AA",
+            "techniques": [
+              {
+                "title": "",
+                "description": "Line height (line spacing) to at least 1.5 times the font size;"
+              },
+              {
+                "title": "",
+                "description": "Spacing following paragraphs to at least 2 times the font size;"
+              },
+              {
+                "title": "",
+                "description": "Letter spacing (tracking) to at least 0.12 times the font size;"
+              },
+              {
+                "title": "",
+                "description": "Word spacing to at least 0.16 times the font size."
+              }
+            ]
           },
           {
             "id": "1.4.13",
             "title": "Content on Hover or Focus",
             "description": "Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true:",
-            "level": "AA"
+            "level": "AA",
+            "techniques": [
+              {
+                "title": "Dismissable",
+                "description": "A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;"
+              },
+              {
+                "title": "Hoverable",
+                "description": "If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing;"
+              },
+              {
+                "title": "Persistent",
+                "description": "The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid."
+              }
+            ]
           }
         ]
       }
@@ -240,7 +412,21 @@
             "id": "2.1.4",
             "title": "Character Key Shortcuts",
             "description": "If a keyboard shortcut is implemented in content using only letter (including upper- and lower-case letters), punctuation, number, or symbol characters, then at least one of the following is true:",
-            "level": "A"
+            "level": "A",
+            "techniques": [
+              {
+                "title": "Turn off",
+                "description": "A mechanism is available to turn the shortcut off;"
+              },
+              {
+                "title": "Remap",
+                "description": "A mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc);"
+              },
+              {
+                "title": "Active only on focus",
+                "description": "The keyboard shortcut for a user interface component is only active when that component has focus."
+              }
+            ]
           }
         ]
       },
@@ -253,13 +439,49 @@
             "id": "2.2.1",
             "title": "Timing Adjustable",
             "description": "For each time limit that is set by the content, at least one of the following is true:",
-            "level": "A"
+            "level": "A",
+            "techniques": [
+              {
+                "title": "Turn off",
+                "description": "The user is allowed to turn off the time limit before encountering it; or"
+              },
+              {
+                "title": "Adjust",
+                "description": "The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or"
+              },
+              {
+                "title": "Extend",
+                "description": "The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, \"press the space bar\"), and the user is allowed to extend the time limit at least ten times; or"
+              },
+              {
+                "title": "Real-time Exception",
+                "description": "The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or"
+              },
+              {
+                "title": "Essential Exception",
+                "description": "The time limit is essential and extending it would invalidate the activity; or"
+              },
+              {
+                "title": "20 Hour Exception",
+                "description": "The time limit is longer than 20 hours."
+              }
+            ]
           },
           {
             "id": "2.2.2",
             "title": "Pause, Stop, Hide",
             "description": "For moving, blinking, scrolling, or auto-updating information, all of the following are true:",
-            "level": "A"
+            "level": "A",
+            "techniques": [
+              {
+                "title": "Moving, blinking, scrolling",
+                "description": "For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential; and"
+              },
+              {
+                "title": "Auto-updating",
+                "description": "For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential."
+              }
+            ]
           },
           {
             "id": "2.2.3",
@@ -394,7 +616,25 @@
             "id": "2.5.2",
             "title": "Pointer Cancellation",
             "description": "For functionality that can be operated using a single pointer, at least one of the following is true:",
-            "level": "A"
+            "level": "A",
+            "techniques": [
+              {
+                "title": "No Down-Event",
+                "description": "The down-event of the pointer is not used to execute any part of the function;"
+              },
+              {
+                "title": "Abort or Undo",
+                "description": "Completion of the function is on the up-event, and a mechanism is available to abort the function before completion or to undo the function after completion;"
+              },
+              {
+                "title": "Up Reversal",
+                "description": "The up-event reverses any outcome of the preceding down-event;"
+              },
+              {
+                "title": "Essential",
+                "description": "Completing the function on the down-event is essential."
+              }
+            ]
           },
           {
             "id": "2.5.3",
@@ -406,13 +646,41 @@
             "id": "2.5.4",
             "title": "Motion Actuation",
             "description": "Functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation, except when:",
-            "level": "A"
+            "level": "A",
+            "techniques": [
+              {
+                "title": "Supported Interface",
+                "description": "The motion is used to operate functionality through an accessibility supported interface;"
+              },
+              {
+                "title": "Essential",
+                "description": "The motion is essential for the function and doing so would invalidate the activity."
+              }
+            ]
           },
           {
             "id": "2.5.5",
             "title": "Target Size",
             "description": "The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when:",
-            "level": "AAA"
+            "level": "AAA",
+            "techniques": [
+              {
+                "title": "Equivalent",
+                "description": "The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;"
+              },
+              {
+                "title": "Inline",
+                "description": "The target is in a sentence or block of text;"
+              },
+              {
+                "title": "User Agent Control",
+                "description": "The size of the target is determined by the user agent and is not modified by the author;"
+              },
+              {
+                "title": "Essential",
+                "description": "A particular presentation of the target is essential to the information being conveyed."
+              }
+            ]
           },
           {
             "id": "2.5.6",
@@ -536,7 +804,21 @@
             "id": "3.3.4",
             "title": "Error Prevention (Legal, Financial, Data)",
             "description": "For Web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least one of the following is true:",
-            "level": "AA"
+            "level": "AA",
+            "techniques": [
+              {
+                "title": "Reversible",
+                "description": "Submissions are reversible."
+              },
+              {
+                "title": "Checked",
+                "description": "Data entered by the user is checked for input errors and the user is provided an opportunity to correct them."
+              },
+              {
+                "title": "Confirmed",
+                "description": "A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission."
+              }
+            ]
           },
           {
             "id": "3.3.5",
@@ -548,7 +830,21 @@
             "id": "3.3.6",
             "title": "Error Prevention (All)",
             "description": "For Web pages that require the user to submit information, at least one of the following is true:",
-            "level": "AAA"
+            "level": "AAA",
+            "techniques": [
+              {
+                "title": "Reversible",
+                "description": "Submissions are reversible."
+              },
+              {
+                "title": "Checked",
+                "description": "Data entered by the user is checked for input errors and the user is provided an opportunity to correct them."
+              },
+              {
+                "title": "Confirmed",
+                "description": "A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission."
+              }
+            ]
           }
         ]
       }

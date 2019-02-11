@@ -26,6 +26,20 @@
           {% for criterion in guideline.criteria %}
             <h4>{{ criterion.id }}. {{ criterion.title }}</h4>
             <p>{{ criterion.description }}</p>
+
+            {% if criterion.techniques %}
+              <ul>
+                {% for technique in criterion.techniques %}
+                  <li>
+                    {% if technique.title != "" %}
+                      <strong>{{ technique.title }}:</strong>
+                    {% endif %}
+                    {{ technique.description }}
+                  </li>
+                {% endfor%}
+              </ul>
+            {% endif %}
+
           {% endfor %}
 
         {% endfor %}
