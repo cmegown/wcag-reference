@@ -22,7 +22,14 @@
         {% for guideline in principle.guidelines %}
           <h3>{{ guideline.id }}. {{ guideline.title }}</h3>
           <p>{{ guideline.description }}</p>
+
+          {% for criterion in guideline.criteria %}
+            <h4>{{ criterion.id }}. {{ criterion.title }}</h4>
+            <p>{{ criterion.description }}</p>
+          {% endfor %}
+
         {% endfor %}
+
       {% endfor %}
     </main>
   </body>
