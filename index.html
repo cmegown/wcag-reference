@@ -36,16 +36,41 @@
 
       {% assign principles = site.data.wcag %}
 
+      <nav>
+        <h2>Table of Contents</h2>
+        <ul>
+          {% for principle in principles %}
+            <li>
+              <a href="#{{ principle.id }}">{{ principle.title }}</a>
+              <ul>
+                {% for guideline in principle.guidelines %}
+                  <li>
+                    <a href="#{{ guideline.id }}">{{ guideline.title }}</a>
+                    <ul>
+                      {% for criterion in guideline.criteria %}
+                        <li>
+                          <a href="#{{ criterion.id }}">{{ criterion.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
       {% for principle in principles %}
-        <h2>{{ principle.id }}. {{ principle.title }}</h2>
+        <h2 id="{{ principle.id }}">{{ principle.id }}. {{ principle.title }}</h2>
         <p>{{ principle.description }}</p>
 
         {% for guideline in principle.guidelines %}
-          <h3>{{ guideline.id }}. {{ guideline.title }}</h3>
+          <h3 id="{{ guideline.id }}">{{ guideline.id }}. {{ guideline.title }}</h3>
           <p>{{ guideline.description }}</p>
 
           {% for criterion in guideline.criteria %}
-            <h4>{{ criterion.id }}. {{ criterion.title }}</h4>
+            <h4 id="{{ criterion.id }}">{{ criterion.id }}. {{ criterion.title }}</h4>
             <p>{{ criterion.description }}</p>
 
             {% if criterion.techniques %}
