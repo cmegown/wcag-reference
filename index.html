@@ -68,34 +68,35 @@
       </nav>
 
       {% for principle in principles %}
-        <h2 id="{{ principle.id }}">{{ principle.id }}. {{ principle.title }}</h2>
-        <p>{{ principle.description }}</p>
+        <section aria-labelledby="{{ principle.id }}">
+          <h2 id="{{ principle.id }}">{{ principle.id }}. {{ principle.title }}</h2>
+          <p>{{ principle.description }}</p>
 
-        {% for guideline in principle.guidelines %}
-          <h3 id="{{ guideline.id }}">{{ guideline.id }}. {{ guideline.title }}</h3>
-          <p>{{ guideline.description }}</p>
+          {% for guideline in principle.guidelines %}
+            <h3 id="{{ guideline.id }}">{{ guideline.id }}. {{ guideline.title }}</h3>
+            <p>{{ guideline.description }}</p>
 
-          {% for criterion in guideline.criteria %}
-            <h4 id="{{ criterion.id }}">{{ criterion.id }}. {{ criterion.title }}</h4>
-            <p>{{ criterion.description }}</p>
+            {% for criterion in guideline.criteria %}
+              <h4 id="{{ criterion.id }}">{{ criterion.id }}. {{ criterion.title }}</h4>
+              <p>{{ criterion.description }}</p>
 
-            {% if criterion.techniques %}
-              <ul>
-                {% for technique in criterion.techniques %}
-                  <li>
-                    {% if technique.title != "" %}
-                      <strong>{{ technique.title }}:</strong>
-                    {% endif %}
-                    {{ technique.description }}
-                  </li>
-                {% endfor%}
-              </ul>
-            {% endif %}
+              {% if criterion.techniques %}
+                <ul>
+                  {% for technique in criterion.techniques %}
+                    <li>
+                      {% if technique.title != "" %}
+                        <strong>{{ technique.title }}:</strong>
+                      {% endif %}
+                      {{ technique.description }}
+                    </li>
+                  {% endfor%}
+                </ul>
+              {% endif %}
+
+            {% endfor %}
 
           {% endfor %}
-
-        {% endfor %}
-
+        </section>
       {% endfor %}
     </main>
   </body>
