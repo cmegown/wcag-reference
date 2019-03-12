@@ -72,6 +72,7 @@
 
             {% for criterion in guideline.criteria %}
               <h4 id="{{ criterion.id }}">{{ criterion.id }}. {{ criterion.title }}</h4>
+              <p>Level {{ criterion.level }}</p>
               <p>{{ criterion.description }}</p>
 
               {% if criterion.techniques %}
