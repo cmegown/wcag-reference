@@ -62,34 +62,36 @@
       </nav>
 
       {% for principle in principles %}
-        <section aria-labelledby="{{ principle.id }}">
+        <section>
           <h2 id="{{ principle.id }}">{{ principle.id }}. {{ principle.title }}</h2>
           <p>{{ principle.description }}</p>
 
           {% for guideline in principle.guidelines %}
-            <h3 id="{{ guideline.id }}">{{ guideline.id }}. {{ guideline.title }}</h3>
-            <p>{{ guideline.description }}</p>
+            <section>
+              <h3 id="{{ guideline.id }}">{{ guideline.id }}. {{ guideline.title }}</h3>
+              <p>{{ guideline.description }}</p>
 
-            {% for criterion in guideline.criteria %}
-              <h4 id="{{ criterion.id }}">{{ criterion.id }}. {{ criterion.title }}</h4>
-              <p>Level {{ criterion.level }}</p>
-              <p>{{ criterion.description }}</p>
+              {% for criterion in guideline.criteria %}
+                <section>
+                  <h4 id="{{ criterion.id }}">{{ criterion.id }}. {{ criterion.title }}</h4>
+                  <p>Level {{ criterion.level }}</p>
+                  <p>{{ criterion.description }}</p>
 
-              {% if criterion.techniques %}
-                <ul>
-                  {% for technique in criterion.techniques %}
-                    <li>
-                      {% if technique.title != "" %}
-                        <strong>{{ technique.title }}:</strong>
-                      {% endif %}
-                      {{ technique.description }}
-                    </li>
-                  {% endfor%}
-                </ul>
-              {% endif %}
-
-            {% endfor %}
-
+                  {% if criterion.techniques %}
+                    <ul>
+                      {% for technique in criterion.techniques %}
+                        <li>
+                          {% if technique.title != "" %}
+                            <strong>{{ technique.title }}:</strong>
+                          {% endif %}
+                          {{ technique.description }}
+                        </li>
+                      {% endfor%}
+                    </ul>
+                  {% endif %}
+                </section>
+              {% endfor %}
+            </section>
           {% endfor %}
         </section>
       {% endfor %}
