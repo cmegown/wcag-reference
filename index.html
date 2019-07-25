@@ -63,17 +63,17 @@
 
       {% for principle in principles %}
         <section>
-          <h2 id="{{ principle.id }}">{{ principle.id }}. {{ principle.title }}</h2>
+          <h2 id="{{ principle.title | slugify }}">{{ principle.id }}. {{ principle.title }}</h2>
           <p>{{ principle.description }}</p>
 
           {% for guideline in principle.guidelines %}
             <section>
-              <h3 id="{{ guideline.id }}">{{ guideline.id }}. {{ guideline.title }}</h3>
+              <h3 id="{{ guideline.title | slugify }}">{{ guideline.id }}. {{ guideline.title }}</h3>
               <p>{{ guideline.description }}</p>
 
               {% for criterion in guideline.criteria %}
                 <section>
-                  <h4 id="{{ criterion.id }}">{{ criterion.id }}. {{ criterion.title }}</h4>
+                  <h4 id="{{ criterion.title | slugify }}">{{ criterion.id }}. {{ criterion.title }}</h4>
                   <p>Level {{ criterion.level }}</p>
                   <p>{{ criterion.description }}</p>
 
