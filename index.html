@@ -41,15 +41,15 @@
         <ul>
           {% for principle in principles %}
             <li>
-              <a href="#{{ principle.id }}">{{ principle.title }}</a>
+              <a href="#{{ principle.title | slugify }}">{{ principle.title }}</a>
               <ul>
                 {% for guideline in principle.guidelines %}
                   <li>
-                    <a href="#{{ guideline.id }}">{{ guideline.title }}</a>
+                    <a href="#{{ guideline.title | slugify }}">{{ guideline.title }}</a>
                     <ul>
                       {% for criterion in guideline.criteria %}
                         <li>
-                          <a href="#{{ criterion.id }}">{{ criterion.title }}</a>
+                          <a href="#{{ criterion.title | slugify }}">{{ criterion.title }}</a>
                         </li>
                       {% endfor %}
                     </ul>
