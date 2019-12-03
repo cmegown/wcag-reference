@@ -10,25 +10,7 @@
 
     <title>WCAG Reference</title>
 
-    <style>
-      *,
-      *:before,
-      *:after {
-        box-sizing: border-box;
-      }
-
-      body {
-        max-width: 50em;
-        margin: 0 auto;
-        padding: 0 1em;
-        line-height: 1.5;
-        font-family: sans-serif;
-      }
-
-      ul {
-        padding-left: 1em;
-      }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <main>
@@ -37,28 +19,36 @@
       {% assign principles = site.data.wcag %}
 
       <nav>
-        <h2>Table of Contents</h2>
-        <ul>
+        <ol>
           {% for principle in principles %}
             <li>
-              <a href="#{{ principle.title | slugify }}">{{ principle.title }}</a>
-              <ul>
+              <a href="#{{ principle.title | slugify }}">
+                <strong>{{ principle.id }}</strong>
+                {{ principle.title }}
+              </a>
+              <ol>
                 {% for guideline in principle.guidelines %}
                   <li>
-                    <a href="#{{ guideline.title | slugify }}">{{ guideline.title }}</a>
-                    <ul>
+                    <a href="#{{ guideline.title | slugify }}">
+                      <strong>{{ guideline.id }}</strong>
+                      {{ guideline.title }}
+                    </a>
+                    <ol>
                       {% for criterion in guideline.criteria %}
                         <li>
-                          <a href="#{{ criterion.title | slugify }}">{{ criterion.title }}</a>
+                          <a href="#{{ criterion.title | slugify }}">
+                            <strong>{{ criterion.id }}</strong>
+                            {{ criterion.title }}
+                          </a>
                         </li>
                       {% endfor %}
-                    </ul>
+                    </ol>
                   </li>
                 {% endfor %}
-              </ul>
+              </ol>
             </li>
           {% endfor %}
-        </ul>
+        </ol>
       </nav>
 
       {% for principle in principles %}
