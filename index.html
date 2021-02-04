@@ -52,19 +52,18 @@
       </nav>
 
       {% for principle in principles %}
-        <section>
+        <section aria-labelledby="{{ principle.title | slugify }}">
           <h2 id="{{ principle.title | slugify }}">{{ principle.id }}. {{ principle.title }}</h2>
           <p>{{ principle.description }}</p>
 
           {% for guideline in principle.guidelines %}
-            <section>
+            <section aria-labelledby="{{ guideline.title | slugify }}">
               <h3 id="{{ guideline.title | slugify }}">{{ guideline.id }}. {{ guideline.title }}</h3>
               <p>{{ guideline.description }}</p>
 
               {% for criterion in guideline.criteria %}
-                <section>
-                  <h4 id="{{ criterion.title | slugify }}">{{ criterion.id }}. {{ criterion.title }}</h4>
-                  <p>Level {{ criterion.level }}</p>
+                <section aria-labelledby="{{ criterion.title | slugify }}">
+                  <h4 id="{{ criterion.title | slugify }}">{{ criterion.id }}. {{ criterion.title }} &mdash; Level {{ criterion.level }}</h4>
                   <p>{{ criterion.description }}</p>
 
                   {% if criterion.techniques %}
