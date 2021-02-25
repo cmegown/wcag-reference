@@ -1,0 +1,1731 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WCAG Reference</title>
+
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        line-height: 1.5;
+        font-family: sans-serif;
+      }
+
+      main {
+        max-width: 48rem;
+        margin: 0 auto;
+        padding: 0 1em;
+      }
+
+      details ol {
+        list-style: none;
+      }
+
+      section section {
+        padding-left: 2.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>WCAG Reference</h1>
+
+      <details>
+        <summary>Table of Contents</summary>
+        <nav>
+          <ol>
+            
+              <li>
+                <a href="#perceivable">1. Perceivable</a>
+                <ol>
+                  
+                    <li>
+                      <a href="#text-alternatives">1.1. Text Alternatives</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#non-text-content">1.1.1. Non-text Content</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#time-based-media">1.2. Time-based Media</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#audio-only-and-video-only-(prerecorded)">1.2.1. Audio-only and Video-only (Prerecorded)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#captions-(prerecorded)">1.2.2. Captions (Prerecorded)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#audio-description-or-media-alternative-(prerecorded)">1.2.3. Audio Description or Media Alternative (Prerecorded)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#captions-(live)">1.2.4. Captions (Live)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#audio-description-(prerecorded)">1.2.5. Audio Description (Prerecorded)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#sign-language-(prerecorded)">1.2.6. Sign Language (Prerecorded)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#extended-audio-description-(prerecorded)">1.2.7. Extended Audio Description (Prerecorded)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#media-alternative-(prerecorded)">1.2.8. Media Alternative (Prerecorded)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#audio-only-(live)">1.2.9. Audio-only (Live)</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#adaptable">1.3. Adaptable</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#info-and-relationships">1.3.1. Info and Relationships</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#meaningful-sequence">1.3.2. Meaningful Sequence</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#sensory-characteristics">1.3.3. Sensory Characteristics</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#orientation">1.3.4. Orientation</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#identify-input-purpose">1.3.5. Identify Input Purpose</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#identify-purpose">1.3.6. Identify Purpose</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#distinguishable">1.4. Distinguishable</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#use-of-color">1.4.1. Use of Color</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#audio-control">1.4.2. Audio Control</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#contrast-(minimum)">1.4.3. Contrast (Minimum)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#resize-text">1.4.4. Resize text</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#images-of-text">1.4.5. Images of Text</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#contrast-(enhanced)">1.4.6. Contrast (Enhanced)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#low-or-no-background-audio">1.4.7. Low or No Background Audio</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#visual-presentation">1.4.8. Visual Presentation</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#images-of-text-(no-exception)">1.4.9. Images of Text (No Exception)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#reflow">1.4.10. Reflow</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#non-text-contrast">1.4.11. Non-text Contrast</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#text-spacing">1.4.12. Text Spacing</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#content-on-hover-or-focus">1.4.13. Content on Hover or Focus</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                </ol>
+              </li>
+            
+              <li>
+                <a href="#operable">2. Operable</a>
+                <ol>
+                  
+                    <li>
+                      <a href="#keyboard-accessible">2.1. Keyboard Accessible</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#keyboard">2.1.1. Keyboard</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#no-keyboard-trap">2.1.2. No Keyboard Trap</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#keyboard-(no-exception)">2.1.3. Keyboard (No Exception)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#character-key-shortcuts">2.1.4. Character Key Shortcuts</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#enough-time">2.2. Enough Time</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#timing-adjustable">2.2.1. Timing Adjustable</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#pause-stop-hide">2.2.2. Pause, Stop, Hide</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#no-timing">2.2.3. No Timing</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#interruptions">2.2.4. Interruptions</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#re-authenticating">2.2.5. Re-authenticating</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#timeouts">2.2.6. Timeouts</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#seizures-and-physical-reactions">2.3. Seizures and Physical Reactions</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#three-flashes-or-below-threshold">2.3.1. Three Flashes or Below Threshold</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#three-flashes">2.3.2. Three Flashes</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#animation-from-interactions">2.3.3. Animation from Interactions</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#navigable">2.4. Navigable</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#bypass-blocks">2.4.1. Bypass Blocks</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#page-titled">2.4.2. Page Titled</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#focus-order">2.4.3. Focus Order</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#link-purpose-(in-context)">2.4.4. Link Purpose (In Context)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#multiple-ways">2.4.5. Multiple Ways</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#headings-and-labels">2.4.6. Headings and Labels</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#focus-visible">2.4.7. Focus Visible</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#location">2.4.8. Location</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#link-purpose-(link-only)">2.4.9. Link Purpose (Link Only)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#section-headings">2.4.10. Section Headings</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#input-modalities">2.5. Input Modalities</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#pointer-gestures">2.5.1. Pointer Gestures</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#pointer-cancellation">2.5.2. Pointer Cancellation</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#label-in-name">2.5.3. Label in Name</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#motion-actuation">2.5.4. Motion Actuation</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#target-size">2.5.5. Target Size</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#concurrent-input-mechanisms">2.5.6. Concurrent Input Mechanisms</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                </ol>
+              </li>
+            
+              <li>
+                <a href="#understandable">3. Understandable</a>
+                <ol>
+                  
+                    <li>
+                      <a href="#readable">3.1. Readable</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#language-of-page">3.1.1. Language of Page</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#language-of-parts">3.1.2. Language of Parts</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#unusual-words">3.1.3. Unusual Words</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#abbreviations">3.1.4. Abbreviations</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#reading-level">3.1.5. Reading Level</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#pronunciation">3.1.6. Pronunciation</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#predictable">3.2. Predictable</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#on-focus">3.2.1. On Focus</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#on-input">3.2.2. On Input</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#consistent-navigation">3.2.3. Consistent Navigation</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#consistent-identification">3.2.4. Consistent Identification</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#change-on-request">3.2.5. Change on Request</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                    <li>
+                      <a href="#input-assistance">3.3. Input Assistance</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#error-identification">3.3.1. Error Identification</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#labels-or-instructions">3.3.2. Labels or Instructions</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#error-suggestion">3.3.3. Error Suggestion</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#error-prevention-(legal-financial-data)">3.3.4. Error Prevention (Legal, Financial, Data)</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#help">3.3.5. Help</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#error-prevention-(all)">3.3.6. Error Prevention (All)</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                </ol>
+              </li>
+            
+              <li>
+                <a href="#robust">4. Robust</a>
+                <ol>
+                  
+                    <li>
+                      <a href="#compatible">4.1. Compatible</a>
+                      <ol>
+                        
+                          <li>
+                            <a href="#parsing">4.1.1. Parsing</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#name-role-value">4.1.2. Name, Role, Value</a>
+                          </li>
+                        
+                          <li>
+                            <a href="#status-messages">4.1.3. Status Messages</a>
+                          </li>
+                        
+                      </ol>
+                    </li>
+                  
+                </ol>
+              </li>
+            
+          </ol>
+        </nav>
+      </details>
+
+      
+        <section aria-labelledby="perceivable">
+          <h2 id="perceivable">1. Perceivable</h2>
+          <p>Information and user interface components must be presentable to users in ways they can perceive.</p>
+
+          
+            <section aria-labelledby="text-alternatives">
+              <h3 id="text-alternatives">1.1. Text Alternatives</h3>
+              <p>Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.</p>
+
+              
+                <section aria-labelledby="non-text-content">
+                  <h4 id="non-text-content">1.1.1. Non-text Content</h4>
+                  <p>Level A</p>
+                  <p>All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Controls, Input:</strong>
+                          
+                          If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to Success Criterion 4.1.2 for additional requirements for controls and content that accepts user input.)
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Time-Based Media:</strong>
+                          
+                          If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Test:</strong>
+                          
+                          If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Sensory:</strong>
+                          
+                          If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>CAPTCHA:</strong>
+                          
+                          If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Decoration, Formatting, Invisible:</strong>
+                          
+                          If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="time-based-media">
+              <h3 id="time-based-media">1.2. Time-based Media</h3>
+              <p>Provide alternatives for time-based media.</p>
+
+              
+                <section aria-labelledby="audio-only-and-video-only-(prerecorded)">
+                  <h4 id="audio-only-and-video-only-(prerecorded)">1.2.1. Audio-only and Video-only (Prerecorded)</h4>
+                  <p>Level A</p>
+                  <p>For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Prerecorded Audio-only:</strong>
+                          
+                          An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Prerecorded Video-only:</strong>
+                          
+                          Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="captions-(prerecorded)">
+                  <h4 id="captions-(prerecorded)">1.2.2. Captions (Prerecorded)</h4>
+                  <p>Level A</p>
+                  <p>Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="audio-description-or-media-alternative-(prerecorded)">
+                  <h4 id="audio-description-or-media-alternative-(prerecorded)">1.2.3. Audio Description or Media Alternative (Prerecorded)</h4>
+                  <p>Level A</p>
+                  <p>An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="captions-(live)">
+                  <h4 id="captions-(live)">1.2.4. Captions (Live)</h4>
+                  <p>Level AA</p>
+                  <p>Captions are provided for all live audio content in synchronized media.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="audio-description-(prerecorded)">
+                  <h4 id="audio-description-(prerecorded)">1.2.5. Audio Description (Prerecorded)</h4>
+                  <p>Level AA</p>
+                  <p>Audio description is provided for all prerecorded video content in synchronized media.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="sign-language-(prerecorded)">
+                  <h4 id="sign-language-(prerecorded)">1.2.6. Sign Language (Prerecorded)</h4>
+                  <p>Level AAA</p>
+                  <p>Sign language interpretation is provided for all prerecorded audio content in synchronized media.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="extended-audio-description-(prerecorded)">
+                  <h4 id="extended-audio-description-(prerecorded)">1.2.7. Extended Audio Description (Prerecorded)</h4>
+                  <p>Level AAA</p>
+                  <p>Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all prerecorded video content in synchronized media.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="media-alternative-(prerecorded)">
+                  <h4 id="media-alternative-(prerecorded)">1.2.8. Media Alternative (Prerecorded)</h4>
+                  <p>Level AAA</p>
+                  <p>An alternative for time-based media is provided for all prerecorded synchronized media and for all prerecorded video-only media.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="audio-only-(live)">
+                  <h4 id="audio-only-(live)">1.2.9. Audio-only (Live)</h4>
+                  <p>Level AAA</p>
+                  <p>An alternative for time-based media that presents equivalent information for live audio-only content is provided.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="adaptable">
+              <h3 id="adaptable">1.3. Adaptable</h3>
+              <p>Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</p>
+
+              
+                <section aria-labelledby="info-and-relationships">
+                  <h4 id="info-and-relationships">1.3.1. Info and Relationships</h4>
+                  <p>Level A</p>
+                  <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="meaningful-sequence">
+                  <h4 id="meaningful-sequence">1.3.2. Meaningful Sequence</h4>
+                  <p>Level A</p>
+                  <p>When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="sensory-characteristics">
+                  <h4 id="sensory-characteristics">1.3.3. Sensory Characteristics</h4>
+                  <p>Level A</p>
+                  <p>Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="orientation">
+                  <h4 id="orientation">1.3.4. Orientation</h4>
+                  <p>Level AA</p>
+                  <p>Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="identify-input-purpose">
+                  <h4 id="identify-input-purpose">1.3.5. Identify Input Purpose</h4>
+                  <p>Level AA</p>
+                  <p>The purpose of each input field collecting information about the user can be programmatically determined when:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                          The input field serves a purpose identified in the Input Purposes for User Interface Components section; and
+                        </li>
+                      
+                        <li>
+                          
+                          The content is implemented using technologies with support for identifying the expected meaning for form input data.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="identify-purpose">
+                  <h4 id="identify-purpose">1.3.6. Identify Purpose</h4>
+                  <p>Level AAA</p>
+                  <p>In content implemented using markup languages, the purpose of User Interface Components, icons, and regions can be programmatically determined.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="distinguishable">
+              <h3 id="distinguishable">1.4. Distinguishable</h3>
+              <p>Make it easier for users to see and hear content including separating foreground from background.</p>
+
+              
+                <section aria-labelledby="use-of-color">
+                  <h4 id="use-of-color">1.4.1. Use of Color</h4>
+                  <p>Level A</p>
+                  <p>Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="audio-control">
+                  <h4 id="audio-control">1.4.2. Audio Control</h4>
+                  <p>Level A</p>
+                  <p>If any audio on a Web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="contrast-(minimum)">
+                  <h4 id="contrast-(minimum)">1.4.3. Contrast (Minimum)</h4>
+                  <p>Level AA</p>
+                  <p>The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Large Text:</strong>
+                          
+                          Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Incidental:</strong>
+                          
+                          Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Logotypes:</strong>
+                          
+                          Text that is part of a logo or brand name has no contrast requirement.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="resize-text">
+                  <h4 id="resize-text">1.4.4. Resize text</h4>
+                  <p>Level AA</p>
+                  <p>Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="images-of-text">
+                  <h4 id="images-of-text">1.4.5. Images of Text</h4>
+                  <p>Level AA</p>
+                  <p>If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for the following:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Customizable:</strong>
+                          
+                          The image of text can be visually customized to the user's requirements;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Essential:</strong>
+                          
+                          A particular presentation of text is essential to the information being conveyed.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="contrast-(enhanced)">
+                  <h4 id="contrast-(enhanced)">1.4.6. Contrast (Enhanced)</h4>
+                  <p>Level AAA</p>
+                  <p>The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Large Text:</strong>
+                          
+                          Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Incidental:</strong>
+                          
+                          Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Logotypes:</strong>
+                          
+                          Text that is part of a logo or brand name has no contrast requirement.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="low-or-no-background-audio">
+                  <h4 id="low-or-no-background-audio">1.4.7. Low or No Background Audio</h4>
+                  <p>Level AAA</p>
+                  <p>For prerecorded audio-only content that (1) contains primarily speech in the foreground, (2) is not an audio CAPTCHA or audio logo, and (3) is not vocalization intended to be primarily musical expression such as singing or rapping, at least one of the following is true:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>No Background:</strong>
+                          
+                          The audio does not contain background sounds.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Turn Off:</strong>
+                          
+                          The background sounds can be turned off.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>20 dB:</strong>
+                          
+                          The background sounds are at least 20 decibels lower than the foreground speech content, with the exception of occasional sounds that last for only one or two seconds.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="visual-presentation">
+                  <h4 id="visual-presentation">1.4.8. Visual Presentation</h4>
+                  <p>Level AAA</p>
+                  <p>For the visual presentation of blocks of text, a mechanism is available to achieve the following:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                          Foreground and background colors can be selected by the user.
+                        </li>
+                      
+                        <li>
+                          
+                          Width is no more than 80 characters or glyphs (40 if CJK).
+                        </li>
+                      
+                        <li>
+                          
+                          Text is not justified (aligned to both the left and the right margins).
+                        </li>
+                      
+                        <li>
+                          
+                          Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing.
+                        </li>
+                      
+                        <li>
+                          
+                          Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="images-of-text-(no-exception)">
+                  <h4 id="images-of-text-(no-exception)">1.4.9. Images of Text (No Exception)</h4>
+                  <p>Level AAA</p>
+                  <p>Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="reflow">
+                  <h4 id="reflow">1.4.10. Reflow</h4>
+                  <p>Level AA</p>
+                  <p>Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                          Vertical scrolling content at a width equivalent to 320 CSS pixels;
+                        </li>
+                      
+                        <li>
+                          
+                          Horizontal scrolling content at a height equivalent to 256 CSS pixels.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="non-text-contrast">
+                  <h4 id="non-text-contrast">1.4.11. Non-text Contrast</h4>
+                  <p>Level AA</p>
+                  <p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>User Interface Components:</strong>
+                          
+                          Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Graphical Objects:</strong>
+                          
+                          Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="text-spacing">
+                  <h4 id="text-spacing">1.4.12. Text Spacing</h4>
+                  <p>Level AA</p>
+                  <p>In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                          Line height (line spacing) to at least 1.5 times the font size;
+                        </li>
+                      
+                        <li>
+                          
+                          Spacing following paragraphs to at least 2 times the font size;
+                        </li>
+                      
+                        <li>
+                          
+                          Letter spacing (tracking) to at least 0.12 times the font size;
+                        </li>
+                      
+                        <li>
+                          
+                          Word spacing to at least 0.16 times the font size.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="content-on-hover-or-focus">
+                  <h4 id="content-on-hover-or-focus">1.4.13. Content on Hover or Focus</h4>
+                  <p>Level AA</p>
+                  <p>Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Dismissable:</strong>
+                          
+                          A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Hoverable:</strong>
+                          
+                          If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Persistent:</strong>
+                          
+                          The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+            </section>
+          
+        </section>
+      
+        <section aria-labelledby="operable">
+          <h2 id="operable">2. Operable</h2>
+          <p>User interface components and navigation must be operable.</p>
+
+          
+            <section aria-labelledby="keyboard-accessible">
+              <h3 id="keyboard-accessible">2.1. Keyboard Accessible</h3>
+              <p>Make all functionality available from a keyboard.</p>
+
+              
+                <section aria-labelledby="keyboard">
+                  <h4 id="keyboard">2.1.1. Keyboard</h4>
+                  <p>Level A</p>
+                  <p>All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="no-keyboard-trap">
+                  <h4 id="no-keyboard-trap">2.1.2. No Keyboard Trap</h4>
+                  <p>Level A</p>
+                  <p>If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="keyboard-(no-exception)">
+                  <h4 id="keyboard-(no-exception)">2.1.3. Keyboard (No Exception)</h4>
+                  <p>Level AAA</p>
+                  <p>All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="character-key-shortcuts">
+                  <h4 id="character-key-shortcuts">2.1.4. Character Key Shortcuts</h4>
+                  <p>Level A</p>
+                  <p>If a keyboard shortcut is implemented in content using only letter (including upper- and lower-case letters), punctuation, number, or symbol characters, then at least one of the following is true:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Turn off:</strong>
+                          
+                          A mechanism is available to turn the shortcut off;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Remap:</strong>
+                          
+                          A mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc);
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Active only on focus:</strong>
+                          
+                          The keyboard shortcut for a user interface component is only active when that component has focus.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="enough-time">
+              <h3 id="enough-time">2.2. Enough Time</h3>
+              <p>Provide users enough time to read and use content.</p>
+
+              
+                <section aria-labelledby="timing-adjustable">
+                  <h4 id="timing-adjustable">2.2.1. Timing Adjustable</h4>
+                  <p>Level A</p>
+                  <p>For each time limit that is set by the content, at least one of the following is true:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Turn off:</strong>
+                          
+                          The user is allowed to turn off the time limit before encountering it; or
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Adjust:</strong>
+                          
+                          The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Extend:</strong>
+                          
+                          The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, "press the space bar"), and the user is allowed to extend the time limit at least ten times; or
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Real-time Exception:</strong>
+                          
+                          The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Essential Exception:</strong>
+                          
+                          The time limit is essential and extending it would invalidate the activity; or
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>20 Hour Exception:</strong>
+                          
+                          The time limit is longer than 20 hours.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="pause-stop-hide">
+                  <h4 id="pause-stop-hide">2.2.2. Pause, Stop, Hide</h4>
+                  <p>Level A</p>
+                  <p>For moving, blinking, scrolling, or auto-updating information, all of the following are true:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Moving, blinking, scrolling:</strong>
+                          
+                          For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential; and
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Auto-updating:</strong>
+                          
+                          For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="no-timing">
+                  <h4 id="no-timing">2.2.3. No Timing</h4>
+                  <p>Level AAA</p>
+                  <p>Timing is not an essential part of the event or activity presented by the content, except for non-interactive synchronized media and real-time events.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="interruptions">
+                  <h4 id="interruptions">2.2.4. Interruptions</h4>
+                  <p>Level AAA</p>
+                  <p>Interruptions can be postponed or suppressed by the user, except interruptions involving an emergency.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="re-authenticating">
+                  <h4 id="re-authenticating">2.2.5. Re-authenticating</h4>
+                  <p>Level AAA</p>
+                  <p>When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="timeouts">
+                  <h4 id="timeouts">2.2.6. Timeouts</h4>
+                  <p>Level AAA</p>
+                  <p>Users are warned of the duration of any user inactivity that could cause data loss, unless the data is preserved for more than 20 hours when the user does not take any actions.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="seizures-and-physical-reactions">
+              <h3 id="seizures-and-physical-reactions">2.3. Seizures and Physical Reactions</h3>
+              <p>Do not design content in a way that is known to cause seizures or physical reactions.</p>
+
+              
+                <section aria-labelledby="three-flashes-or-below-threshold">
+                  <h4 id="three-flashes-or-below-threshold">2.3.1. Three Flashes or Below Threshold</h4>
+                  <p>Level A</p>
+                  <p>Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="three-flashes">
+                  <h4 id="three-flashes">2.3.2. Three Flashes</h4>
+                  <p>Level AAA</p>
+                  <p>Web pages do not contain anything that flashes more than three times in any one second period.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="animation-from-interactions">
+                  <h4 id="animation-from-interactions">2.3.3. Animation from Interactions</h4>
+                  <p>Level AAA</p>
+                  <p>Motion animation triggered by interaction can be disabled, unless the animation is essential to the functionality or the information being conveyed.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="navigable">
+              <h3 id="navigable">2.4. Navigable</h3>
+              <p>Provide ways to help users navigate, find content, and determine where they are.</p>
+
+              
+                <section aria-labelledby="bypass-blocks">
+                  <h4 id="bypass-blocks">2.4.1. Bypass Blocks</h4>
+                  <p>Level A</p>
+                  <p>A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="page-titled">
+                  <h4 id="page-titled">2.4.2. Page Titled</h4>
+                  <p>Level A</p>
+                  <p>Web pages have titles that describe topic or purpose.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="focus-order">
+                  <h4 id="focus-order">2.4.3. Focus Order</h4>
+                  <p>Level A</p>
+                  <p>If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="link-purpose-(in-context)">
+                  <h4 id="link-purpose-(in-context)">2.4.4. Link Purpose (In Context)</h4>
+                  <p>Level A</p>
+                  <p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="multiple-ways">
+                  <h4 id="multiple-ways">2.4.5. Multiple Ways</h4>
+                  <p>Level AA</p>
+                  <p>More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="headings-and-labels">
+                  <h4 id="headings-and-labels">2.4.6. Headings and Labels</h4>
+                  <p>Level AA</p>
+                  <p>Headings and labels describe topic or purpose.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="focus-visible">
+                  <h4 id="focus-visible">2.4.7. Focus Visible</h4>
+                  <p>Level AA</p>
+                  <p>Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="location">
+                  <h4 id="location">2.4.8. Location</h4>
+                  <p>Level AAA</p>
+                  <p>Information about the user's location within a set of Web pages is available.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="link-purpose-(link-only)">
+                  <h4 id="link-purpose-(link-only)">2.4.9. Link Purpose (Link Only)</h4>
+                  <p>Level AAA</p>
+                  <p>A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="section-headings">
+                  <h4 id="section-headings">2.4.10. Section Headings</h4>
+                  <p>Level AAA</p>
+                  <p>Section headings are used to organize the content.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="input-modalities">
+              <h3 id="input-modalities">2.5. Input Modalities</h3>
+              <p>Make it easier for users to operate functionality through various inputs beyond keyboard.</p>
+
+              
+                <section aria-labelledby="pointer-gestures">
+                  <h4 id="pointer-gestures">2.5.1. Pointer Gestures</h4>
+                  <p>Level A</p>
+                  <p>All functionality that uses multipoint or path-based gestures for operation can be operated with a single pointer without a path-based gesture, unless a multipoint or path-based gesture is essential.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="pointer-cancellation">
+                  <h4 id="pointer-cancellation">2.5.2. Pointer Cancellation</h4>
+                  <p>Level A</p>
+                  <p>For functionality that can be operated using a single pointer, at least one of the following is true:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>No Down-Event:</strong>
+                          
+                          The down-event of the pointer is not used to execute any part of the function;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Abort or Undo:</strong>
+                          
+                          Completion of the function is on the up-event, and a mechanism is available to abort the function before completion or to undo the function after completion;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Up Reversal:</strong>
+                          
+                          The up-event reverses any outcome of the preceding down-event;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Essential:</strong>
+                          
+                          Completing the function on the down-event is essential.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="label-in-name">
+                  <h4 id="label-in-name">2.5.3. Label in Name</h4>
+                  <p>Level A</p>
+                  <p>For user interface components with labels that include text or images of text, the name contains the text that is presented visually.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="motion-actuation">
+                  <h4 id="motion-actuation">2.5.4. Motion Actuation</h4>
+                  <p>Level A</p>
+                  <p>Functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation, except when:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Supported Interface:</strong>
+                          
+                          The motion is used to operate functionality through an accessibility supported interface;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Essential:</strong>
+                          
+                          The motion is essential for the function and doing so would invalidate the activity.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="target-size">
+                  <h4 id="target-size">2.5.5. Target Size</h4>
+                  <p>Level AAA</p>
+                  <p>The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Equivalent:</strong>
+                          
+                          The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Inline:</strong>
+                          
+                          The target is in a sentence or block of text;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>User Agent Control:</strong>
+                          
+                          The size of the target is determined by the user agent and is not modified by the author;
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Essential:</strong>
+                          
+                          A particular presentation of the target is essential to the information being conveyed.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="concurrent-input-mechanisms">
+                  <h4 id="concurrent-input-mechanisms">2.5.6. Concurrent Input Mechanisms</h4>
+                  <p>Level AAA</p>
+                  <p>Web content does not restrict use of input modalities available on a platform except where the restriction is essential, required to ensure the security of the content, or required to respect user settings.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+        </section>
+      
+        <section aria-labelledby="understandable">
+          <h2 id="understandable">3. Understandable</h2>
+          <p>Information and the operation of user interface must be understandable.</p>
+
+          
+            <section aria-labelledby="readable">
+              <h3 id="readable">3.1. Readable</h3>
+              <p>Make text content readable and understandable.</p>
+
+              
+                <section aria-labelledby="language-of-page">
+                  <h4 id="language-of-page">3.1.1. Language of Page</h4>
+                  <p>Level A</p>
+                  <p>The default human language of each Web page can be programmatically determined.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="language-of-parts">
+                  <h4 id="language-of-parts">3.1.2. Language of Parts</h4>
+                  <p>Level AA</p>
+                  <p>The human language of each passage or phrase in the content can be programmatically determined except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="unusual-words">
+                  <h4 id="unusual-words">3.1.3. Unusual Words</h4>
+                  <p>Level AAA</p>
+                  <p>A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and jargon.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="abbreviations">
+                  <h4 id="abbreviations">3.1.4. Abbreviations</h4>
+                  <p>Level AAA</p>
+                  <p>A mechanism for identifying the expanded form or meaning of abbreviations is available.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="reading-level">
+                  <h4 id="reading-level">3.1.5. Reading Level</h4>
+                  <p>Level AAA</p>
+                  <p>When text requires reading ability more advanced than the lower secondary education level after removal of proper names and titles, supplemental content, or a version that does not require reading ability more advanced than the lower secondary education level, is available.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="pronunciation">
+                  <h4 id="pronunciation">3.1.6. Pronunciation</h4>
+                  <p>Level AAA</p>
+                  <p>A mechanism is available for identifying specific pronunciation of words where meaning of the words, in context, is ambiguous without knowing the pronunciation.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="predictable">
+              <h3 id="predictable">3.2. Predictable</h3>
+              <p>Make Web pages appear and operate in predictable ways.</p>
+
+              
+                <section aria-labelledby="on-focus">
+                  <h4 id="on-focus">3.2.1. On Focus</h4>
+                  <p>Level A</p>
+                  <p>When any user interface component receives focus, it does not initiate a change of context.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="on-input">
+                  <h4 id="on-input">3.2.2. On Input</h4>
+                  <p>Level A</p>
+                  <p>Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="consistent-navigation">
+                  <h4 id="consistent-navigation">3.2.3. Consistent Navigation</h4>
+                  <p>Level AA</p>
+                  <p>Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="consistent-identification">
+                  <h4 id="consistent-identification">3.2.4. Consistent Identification</h4>
+                  <p>Level AA</p>
+                  <p>Components that have the same functionality within a set of Web pages are identified consistently.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="change-on-request">
+                  <h4 id="change-on-request">3.2.5. Change on Request</h4>
+                  <p>Level AAA</p>
+                  <p>Changes of context are initiated only by user request or a mechanism is available to turn off such changes.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+            <section aria-labelledby="input-assistance">
+              <h3 id="input-assistance">3.3. Input Assistance</h3>
+              <p>Help users avoid and correct mistakes.</p>
+
+              
+                <section aria-labelledby="error-identification">
+                  <h4 id="error-identification">3.3.1. Error Identification</h4>
+                  <p>Level A</p>
+                  <p>If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="labels-or-instructions">
+                  <h4 id="labels-or-instructions">3.3.2. Labels or Instructions</h4>
+                  <p>Level A</p>
+                  <p>Labels or instructions are provided when content requires user input.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="error-suggestion">
+                  <h4 id="error-suggestion">3.3.3. Error Suggestion</h4>
+                  <p>Level AA</p>
+                  <p>If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="error-prevention-(legal-financial-data)">
+                  <h4 id="error-prevention-(legal-financial-data)">3.3.4. Error Prevention (Legal, Financial, Data)</h4>
+                  <p>Level AA</p>
+                  <p>For Web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least one of the following is true:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Reversible:</strong>
+                          
+                          Submissions are reversible.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Checked:</strong>
+                          
+                          Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Confirmed:</strong>
+                          
+                          A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+                <section aria-labelledby="help">
+                  <h4 id="help">3.3.5. Help</h4>
+                  <p>Level AAA</p>
+                  <p>Context-sensitive help is available.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="error-prevention-(all)">
+                  <h4 id="error-prevention-(all)">3.3.6. Error Prevention (All)</h4>
+                  <p>Level AAA</p>
+                  <p>For Web pages that require the user to submit information, at least one of the following is true:</p>
+
+                  
+                    <ul>
+                      
+                        <li>
+                          
+                            <strong>Reversible:</strong>
+                          
+                          Submissions are reversible.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Checked:</strong>
+                          
+                          Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.
+                        </li>
+                      
+                        <li>
+                          
+                            <strong>Confirmed:</strong>
+                          
+                          A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
+                        </li>
+                      
+                    </ul>
+                  
+                </section>
+              
+            </section>
+          
+        </section>
+      
+        <section aria-labelledby="robust">
+          <h2 id="robust">4. Robust</h2>
+          <p>Content must be robust enough that it can be interpreted by by a wide variety of user agents, including assistive technologies.</p>
+
+          
+            <section aria-labelledby="compatible">
+              <h3 id="compatible">4.1. Compatible</h3>
+              <p>Maximize compatibility with current and future user agents, including assistive technologies.</p>
+
+              
+                <section aria-labelledby="parsing">
+                  <h4 id="parsing">4.1.1. Parsing</h4>
+                  <p>Level A</p>
+                  <p>In content implemented using markup languages, elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique, except where the specifications allow these features.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="name-role-value">
+                  <h4 id="name-role-value">4.1.2. Name, Role, Value</h4>
+                  <p>Level A</p>
+                  <p>For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.</p>
+
+                  
+                </section>
+              
+                <section aria-labelledby="status-messages">
+                  <h4 id="status-messages">4.1.3. Status Messages</h4>
+                  <p>Level AA</p>
+                  <p>In content implemented using markup languages, status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus.</p>
+
+                  
+                </section>
+              
+            </section>
+          
+        </section>
+      
+    </main>
+  </body>
+</html>
