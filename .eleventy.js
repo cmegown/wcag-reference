@@ -1,6 +1,6 @@
 module.exports = (config) => {
   return {
-    pathPrefix: "/wcag-reference/",
+    pathPrefix: '/wcag-reference/',
     dir: {
       input: 'src',
       output: 'dist'
